@@ -21,13 +21,13 @@ The goals / steps of this project are the following:
 
 My pipline line consisted of the following steps:
 
-1) Convert the images to grayscale
-2) Perform a gaussian blur on the images
-3) Identify edges in the images using the canny function
-4) Specify the region of interest using the region_of_interest function, which keeps the region of the image defined by the polygon formed from `vertices` and sets the rest of the image to black.
-5) Find lines using hough transform, which accepts the identifed edges as input. Note I modified the hough_lines function to also return an array of points for each line.
-6) Create two lines from the hough lines using the crawford_lines function.  The crawford_lines function divides the hough lines into two groups based upon their slope: group 1 has positive slope and group 2 has negative slope.  For each group, I find the average slope and average y-intercept.  Using the boundaries of the region of interest and the avergage slopes and y-intercepts, I calculate the two lines to identify the lane boundaries.
-7) Combine the lane lines and the original image using the weighted_img function.
+####1) Convert the images to grayscale
+####2) Perform a gaussian blur on the images
+####3) Identify edges in the images using the canny function
+####4) Specify the region of interest using the region_of_interest function, which keeps the region of the image defined by the polygon formed from `vertices` and sets the rest of the image to black.
+####5) Find lines using hough transform, which accepts the identifed edges as input. Note I modified the hough_lines function to also return an array of points for each line.
+####6) Create two lines from the hough lines using the crawford_lines function.  The crawford_lines function divides the hough lines into two groups based upon their slope: group 1 has positive slope and group 2 has negative slope.  For each group, I find the average slope and average y-intercept.  Using the boundaries of the region of interest and the avergage slopes and y-intercepts, I calculate the two lines to identify the lane boundaries.
+####7) Combine the lane lines and the original image using the weighted_img function.
 
 
 ###2. Potential shortcomings of the current pipeline
